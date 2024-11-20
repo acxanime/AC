@@ -1,5 +1,4 @@
 pyropatch==2.1    
-hachoir==3.2.0
 pytz==2023.3
 aiohttp 
 Pillow
