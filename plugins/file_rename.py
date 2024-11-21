@@ -30,6 +30,7 @@ async def rename(bot, update):
 @Client.on_callback_query(filters.regex("upload"))
 async def doc(bot, update):
     type = update.data.split("_")[1]
+    user_id = int(update.message.chat.id)
     new_name = update.message.text
     new_filename = new_name.split(":-")[1]
     file_path = f"downloads/{user_id}{time.time()}/{new_filename}"
@@ -72,11 +73,6 @@ async def doc(bot, update):
     #     pass
 
 
-   
-    
-
-
-    user_id = int(update.message.chat.id)
     ph_path = None
     media = getattr(file, file.media.value)
     c_caption = await db.get_caption(update.message.chat.id)
