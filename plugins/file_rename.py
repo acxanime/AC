@@ -32,26 +32,50 @@ async def doc(bot, update):
     type = update.data.split("_")[1]
     new_name = update.message.text
     new_filename = new_name.split(":-")[1]
-    file_path = f"downloads/{new_filename}"
+    file_path = f"downloads/{user_id}{time.time()}/{new_filename}"
     file = update.message.reply_to_message
     ms = await update.message.edit("⚠️__Please wait...__\n__Downloading file to my server...__")
     c_time = time.time()
+    # try:
+    #     path = await bot.download_media(message=file, progress=progress_for_pyrogram, progress_args=(f"\nDownload in progress...\n\n{new_filename}",  ms, c_time))
+    # except Exception as e:
+    #     await ms.edit(e)
+    #     return
+
     try:
-        path = await bot.download_media(message=file, progress=progress_for_pyrogram, progress_args=(f"\nDownload in progress...\n\n{new_filename}",  ms, c_time))
+        path = await file.download(file_name=file_path, progress=progress_for_pyrogram, progress_args=(f"Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ....\n\n{new_filename}", ms, c_time))
     except Exception as e:
-        await ms.edit(e)
-        return
-    splitpath = path.split("/downloads/")
-    dow_file_name = splitpath[1]
-    old_file_name = f"downloads/{dow_file_name}"
-    os.rename(old_file_name, file_path)
+        return await ms.edit(e)
     duration = 0
+    # 
+
     try:
         metadata = extractMetadata(createParser(file_path))
         if metadata.has("duration"):
             duration = metadata.get('duration').seconds
     except:
         pass
+
+
+    # splitpath = path.split("/downloads/")
+    # dow_file_name = splitpath[1]
+    # old_file_name = f"downloads/{dow_file_name}"
+    # os.rename(old_file_name, file_path)
+    # duration = 0
+    
+    
+    # try:
+    #     metadata = extractMetadata(createParser(file_path))
+    #     if metadata.has("duration"):
+    #         duration = metadata.get('duration').seconds
+    # except:
+    #     pass
+
+
+   
+    
+
+
     user_id = int(update.message.chat.id)
     ph_path = None
     media = getattr(file, file.media.value)
