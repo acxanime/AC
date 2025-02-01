@@ -9,7 +9,7 @@ class Config(object):
     API_HASH  = os.environ.get("API_HASH", "")
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
     
-    PORT = os.environ.get("PORT", "")
+    PORT = os.environ.get("PORT", "8080")
 
     # database config
     DB_NAME = os.environ.get("DB_NAME","Cluster0")     
