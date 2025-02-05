@@ -1,9 +1,3 @@
-import string, random, os, sys
-from urllib.parse import quote
-from time import time
-from urllib3 import disable_warnings
-from pyrogram import Client, filters 
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 
 from cloudscraper import create_scraper
 from motor.motor_asyncio import AsyncIOMotorClient
