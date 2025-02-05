@@ -1,6 +1,6 @@
-
 from cloudscraper import create_scraper
 from motor.motor_asyncio import AsyncIOMotorClient
+
 from config import DB_URL as DATABASE_URL
 
 
