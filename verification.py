@@ -18,7 +18,7 @@ VERIFY_EXPIRE = os.environ.get('VERIFY_EXPIRE', 86400) # VERIFY EXPIRE TIME IN S
 VERIFY_TUTORIAL = os.environ.get('VERIFY_TUTORIAL', 'https://t.me/How_to_download_ST/4') # LINK OF TUTORIAL TO VERIFY 
 DATABASE_URL = os.environ.get('DATABASE_URL', 'mongodb+srv://sitaratoons:sitaratoons@cluster0.98nq3.mongodb.net/?retryWrites=true&w=majority') # MONGODB DATABASE URL To Store Verifications 
 COLLECTION_NAME = os.environ.get('COLLECTION_NAME', 'Cluster0')   # Collection Name For MongoDB 
-PREMIUM_USERS = list(map(int, os.environ.get('PREMIUM_USERS', '6805001741 7282828 292929').split()))
+PREMIUM_USERS = list(map(int, os.environ.get('PREMIUM_USERS', '6692613520').split()))
 verify_dict = {}
 missing=[v for v in ["COLLECTION_NAME", "VERIFY_PHOTO", "SHORTLINK_SITE", "SHORTLINK_API", "VERIFY_TUTORIAL"] if not v]; sys.exit(f"Missing: {', '.join(missing)}") if missing else None
 
