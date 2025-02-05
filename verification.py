@@ -15,7 +15,7 @@ VERIFY_PHOTO = os.environ.get('VERIFY_PHOTO', 'https://graph.org/file/c520d0f3e5
 SHORTLINK_SITE = os.environ.get('SHORTLINK_SITE', 'shortxlinks.com') # YOUR SHORTLINK URL LIKE:- site.com
 SHORTLINK_API = os.environ.get('SHORTLINK_API', '32b97a6d89bf4fbe47e14d4b7674d28cc02a422f') # YOUR SHORTLINK API LIKE:- ma82owowjd9hw6_js7
 VERIFY_EXPIRE = os.environ.get('VERIFY_EXPIRE', 86400) # VERIFY EXPIRE TIME IN SECONDS. LIKE:- 0 (ZERO) TO OFF VERIFICATION 
-VERIFY_TUTORIAL = os.environ.get('VERIFY_TUTORIAL', '') # LINK OF TUTORIAL TO VERIFY 
+VERIFY_TUTORIAL = os.environ.get('VERIFY_TUTORIAL', 'https://t.me/How_to_download_ST/4') # LINK OF TUTORIAL TO VERIFY 
 DATABASE_URL = os.environ.get('DATABASE_URL', 'mongodb+srv://sitaratoons:sitaratoons@cluster0.98nq3.mongodb.net/?retryWrites=true&w=majority') # MONGODB DATABASE URL To Store Verifications 
 COLLECTION_NAME = os.environ.get('COLLECTION_NAME', 'Cluster0')   # Collection Name For MongoDB 
 PREMIUM_USERS = list(map(int, os.environ.get('PREMIUM_USERS', '6805001741 7282828 292929').split()))
