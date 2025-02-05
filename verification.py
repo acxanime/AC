@@ -13,12 +13,12 @@ from motor.motor_asyncio import AsyncIOMotorClient
 
 # Config Variables 😄
 VERIFY_PHOTO = os.environ.get('VERIFY_PHOTO', '')  # YOUR VERIFY PHOTO LINK
-SHORTLINK_SITE = os.environ.get('SHORTLINK_SITE', '') # YOUR SHORTLINK URL LIKE:- site.com
-SHORTLINK_API = os.environ.get('SHORTLINK_API', '') # YOUR SHORTLINK API LIKE:- ma82owowjd9hw6_js7
+SHORTLINK_SITE = os.environ.get('SHORTLINK_SITE', 'shortxlinks.com') # YOUR SHORTLINK URL LIKE:- site.com
+SHORTLINK_API = os.environ.get('SHORTLINK_API', '32b97a6d89bf4fbe47e14d4b7674d28cc02a422f') # YOUR SHORTLINK API LIKE:- ma82owowjd9hw6_js7
 VERIFY_EXPIRE = os.environ.get('VERIFY_EXPIRE', 0) # VERIFY EXPIRE TIME IN SECONDS. LIKE:- 0 (ZERO) TO OFF VERIFICATION 
 VERIFY_TUTORIAL = os.environ.get('VERIFY_TUTORIAL', '') # LINK OF TUTORIAL TO VERIFY 
 DATABASE_URL = os.environ.get('DATABASE_URL', '') # MONGODB DATABASE URL To Store Verifications 
-COLLECTION_NAME = os.environ.get('COLLECTION_NAME', '')   # Collection Name For MongoDB 
+COLLECTION_NAME = os.environ.get('COLLECTION_NAME', 'Crustal01')   # Collection Name For MongoDB 
 PREMIUM_USERS = list(map(int, os.environ.get('PREMIUM_USERS', '6805001741 7282828 292929').split()))
 verify_dict = {}
 missing=[v for v in ["COLLECTION_NAME", "VERIFY_PHOTO", "SHORTLINK_SITE", "SHORTLINK_API", "VERIFY_TUTORIAL"] if not v]; sys.exit(f"Missing: {', '.join(missing)}") if missing else None
