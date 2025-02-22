@@ -5,23 +5,23 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "")
-    API_HASH  = os.environ.get("API_HASH", "")
+    API_ID    = os.environ.get("API_ID", "18946488")
+    API_HASH  = os.environ.get("API_HASH", "c163d4e28e63196c3806cf3b9b2885de")
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
     
-    PORT = os.environ.get("PORT", "")
+    PORT = os.environ.get("PORT", "8080")
 
     # database config
-    DB_NAME = os.environ.get("DB_NAME","Cluster0")     
-    DB_URL  = os.environ.get("DB_URL","")
+    DB_NAME = os.environ.get("DB_NAME","yeasin786")     
+    DB_URL  = os.environ.get("DB_URL","mongodb+srv://yeasin786:yeasin786@yeasin786.idpw2.mongodb.net/?retryWrites=true&w=majority")
  
     # other configs
     BOT_UPTIME  = time.time()
-    START_PIC   = os.environ.get("START_PIC", "")
-    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '').split()]
-    FORCE_SUB   = os.environ.get("FORCE_SUB", "") 
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL"))
-    MAX_CONCURRENT_TRANSMISSIONS = int(os.environ.get("MAX_CONCURRENT_TRANSMISSIONS", "2")) # Set the maximum amount of concurrent transmissions (uploads & downloads).
+    START_PIC   = os.environ.get("START_PIC", "https://i.ibb.co/nr6nqC4/IMG-20241030-153858-361.jpg")
+    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '6692613520 5510431132 6289556804').split()]
+    FORCE_SUB   = os.environ.get("FORCE_SUB", "ST_Rename_Update") 
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002320080278"))
+    MAX_CONCURRENT_TRANSMISSIONS = int(os.environ.get("MAX_CONCURRENT_TRANSMISSIONS", "10")) # Set the maximum amount of concurrent transmissions (uploads & downloads).
     
     # wes response configuration     
     WEB_SUPPORT = bool(os.environ.get("WEB_SUPPORT", "True"))
