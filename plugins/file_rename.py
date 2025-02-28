@@ -33,7 +33,7 @@ async def doc(bot, update):
     user_id = int(update.message.chat.id)
     new_name = update.message.text
     new_filename = new_name.split(":-")[1]
-    file_path = f"downloads/{user_id}{time.time()}/{new_filename}</b>"
+    file_path = f"downloads/{user_id}{time.time()}/{new_filename}"
     file = update.message.reply_to_message
     ms = await update.message.edit("⚠️__Please wait...__\n__Downloading file to my server...__")
     c_time = time.time()
